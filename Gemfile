@@ -25,6 +25,9 @@ gem 'better_errors'
 gem 'binding_of_caller'
 gem 'hamlit'
 gem 'devise'
+
+gem 'haml-rails'
+gem 'erb2haml'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
