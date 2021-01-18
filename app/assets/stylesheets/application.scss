@@ -1,0 +1,105 @@
+/* Card Page */
+
+.container {
+    width: 414px;
+    height: 921px;
+    background: #FFFFFF;
+}
+
+/* Boards */
+
+.boards{
+    position: absolute;
+    width: 56px;
+    height: 25px;
+    left: 30px;
+    top: 17px;
+
+    font-family: Avenge;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+
+    /* identical to box height */
+
+    color: #000000;
+}
+
+/* Line */
+
+.line{
+    position: absolute;
+    width: 1920px;
+    height: 1px;
+    left: 0px;
+    top: 58px;
+
+    background: #000000;
+    mix-blend-mode: normal;
+    opacity: 0.1;
+
+}
+
+/* New Comment */
+
+.new_comment{
+    position: absolute;
+    height: 36px;
+    left: 0%;
+    right: 54.64%;
+    top: calc(50% - 36px/2);
+
+    font-family: Avenge;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 36px;
+    color: #000000;
+}
+
+/* Name */
+.name{
+    position: absolute;
+    width: 44px;
+    height: 25px;
+    left: 26px;
+    top: 161px;
+
+    font-family: Avenge;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    /* identical to box height */
+
+
+    color: #000000;
+}
+
+/* Rectangle */
+
+.rectangle{
+    position: absolute;
+    width: 362px;
+    height: 40px;
+    left: 26px;
+    top: 190px;
+
+    background: #F4F4F4;
+    border-radius: 10px;
+}
+
+/* Tag */
+
+.submit_btn{
+    position: absolute;
+    width: 362px;
+    height: 40px;
+    left: 30px;
+    top: 889px;
+
+    background: #F8BD1C;
+    border-radius: 4px;
+    // transform: matrix(1, 0, 0, -1, 0, 0);
+}
