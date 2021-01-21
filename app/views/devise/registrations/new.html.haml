@@ -1,22 +1,19 @@
 .container
   %h2.new_comment Sign up
-  = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-    = render "devise/shared/error_messages", resource: resource
-    .rectangle
-      = f.label :email
-      %br/
-      = f.email_field :email, autofocus: true, autocomplete: "email", class: 'name'
-    .rectangle
-      = f.label :password
-      - if @minimum_password_length
-        %em
-          (#{@minimum_password_length} characters minimum)
-      %br/
-      = f.password_field :password, autocomplete: "new-password", class: 'name'
-    .rectangle
-      = f.label :password_confirmation
-      %br/
-      = f.password_field :password_confirmation, autocomplete: "new-password", class: 'name'
-    .actions
-      = f.submit "Sign up", class: 'submit_btn'
-  = render "devise/shared/links"
+  .label1
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = render "devise/shared/error_messages", resource: resource
+      .field
+        = f.label :email, class: 'name'
+        %br/
+        = f.email_field :email, autofocus: true, autocomplete: "email", class: 'rectangle'
+      .field
+        = f.label :password, class: 'name'
+        %br/
+        = f.password_field :password, autocomplete: "new-password", class: 'rectangle'
+      .field
+        = f.label :password_confirmation, class: 'name'
+        %br/
+        = f.password_field :password_confirmation, autocomplete: "new-password", class: 'rectangle'
+      .actions
+        = f.submit "Sign up", class: 'submit_btn'

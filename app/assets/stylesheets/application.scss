@@ -1,9 +1,16 @@
 /* Card Page */
 
 .container {
-    width: 414px;
-    height: 921px;
-    background: #FFFFFF;
+    padding: 26px;
+}
+
+.label1{
+    position: absolute;
+    width: auto;
+    height: 0px;
+    left: auto;
+    top: 151px;
+
 }
 
 /* Boards */
@@ -30,7 +37,7 @@
 
 .line{
     position: absolute;
-    width: 1920px;
+    width: 375px;
     height: 1px;
     left: 0px;
     top: 58px;
@@ -45,10 +52,10 @@
 
 .new_comment{
     position: absolute;
-    height: 36px;
-    left: 0%;
+    height: 92px;
+    left: 26px;
     right: 54.64%;
-    top: calc(50% - 36px/2);
+    top: 92px;
 
     font-family: Avenge;
     font-style: normal;
@@ -60,11 +67,10 @@
 
 /* Name */
 .name{
+    margin-top: 33px;
     position: absolute;
-    width: 44px;
+    width: 250px;
     height: 25px;
-    left: 26px;
-    top: 161px;
 
     font-family: Avenge;
     font-style: normal;
@@ -80,11 +86,9 @@
 /* Rectangle */
 
 .rectangle{
-    position: absolute;
-    width: 362px;
+    margin-top: 55px;
+    width: 310px;
     height: 40px;
-    left: 26px;
-    top: 190px;
 
     background: #F4F4F4;
     border-radius: 10px;
@@ -94,12 +98,21 @@
 
 .submit_btn{
     position: absolute;
-    width: 362px;
+    width: 310px;
     height: 40px;
-    left: 30px;
-    top: 889px;
+    left: 0px;
+    top: 600px;
+    border: #FFFFFF;
 
     background: #F8BD1C;
     border-radius: 4px;
     // transform: matrix(1, 0, 0, -1, 0, 0);
+
+    font-family: Vanir;
+    font-style: normal;
+    font-size: 18px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
 }
