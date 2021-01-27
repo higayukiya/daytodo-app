@@ -16,7 +16,7 @@ class BoardsController < ApplicationController
     if @board.save
       rendirect_to board_path(@board), notice: '保存できたよ'
     else
-      flash.now[:error] = '保存に失敗しました'
+      flash.now[:error] = '保存に失敗'
       render :new
     end
   end
