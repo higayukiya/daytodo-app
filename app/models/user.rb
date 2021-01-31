@@ -6,4 +6,6 @@ class User < ApplicationRecord
   
   has_many :boards, dependent: :destroy
 
+  has_one :plofile, dependent: :destroy
+
 end
