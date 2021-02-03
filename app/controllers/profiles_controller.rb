@@ -6,17 +6,20 @@ class ProfilesController < ApplicationController
     end
   
     def edit
-      # if current_user.profile.present?
-      #   @profile = current_user.profile
-      # else
-      #   @profile = current_user.build_profile
-      # end
-      @profile = current_user.prepare_profile
+      @profile = current_user.build_profile
     end
-  
+
+    # def create
+    #   @profile = current_user.profile.build(profile_params)
+    #     if @article.save
+    #       redirect_to profile_path(@profile), notice: '保存できたよ'
+    #     else
+    #       flash.now[:error] = '保存に失敗しました'
+    #       render :new
+    #     end
+    # end
     def update
-      @profile = current_user.prepare_profile
-      @profile.assign_attributes(profile_params)
+      @profile = current_user.build_profile(profile_params)
       if @profile.save
         redirect_to profile_path, notice: 'プロフィール更新！'
       else
@@ -31,8 +34,6 @@ class ProfilesController < ApplicationController
         :nickname,
         :introducsion,
         :gender,
-        :birthday,
-        :subscribed,
         :avatar
       )
     end

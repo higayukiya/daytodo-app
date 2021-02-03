@@ -1,11 +1,11 @@
 .container.profilePage
   .profilePage_user
     .profilePage_user_image
-      = image_tag 'default-avatar.png'
+      = image_tag current.user.profile.avatar
     .profilePage_user_basicInfo
       .profilePage_user_name
         .profilePage_user_displayName
-          = current_user.display_name
+          = current_user.display
         .profilePage_user_actionButton
           = link_to 'Edit', edit_profile_path
       .profilePage_user_introduction

@@ -1,1 +1,20 @@
-edit
+.container
+  = form_with(model: @profile, url: profile_path, mehtod: 'put', local: true ) do |f|
+    %div
+      =f.label :avatar, 'アバター'
+    %div
+      =f.file_field :avatar
+    %div
+      = f.label :nickname, 'ハンドルネーム'
+    %div
+      = f.text_field :nickname, class: 'text'
+    %div
+      = f.label :introduction, '自己紹介'
+    %div
+      = f.text_area :introduction, class: 'text'
+    %div
+      =f.label :gender, '性別'
+    %div
+      =f.select :gender, Profile.genders.keys, {}, { class: 'text'}
+    
+    =f.submit '保存', class: 'btn-submit'

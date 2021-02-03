@@ -14,11 +14,7 @@
         Boards
     - if user_signed_in?
       .dropdown
-        = image_tag current_user.avatar_image, class: 'header_avatar dropbtn'
         .dropdown-content
-          = link_to 'プロフィール', #
-          = link_to 'お気に入り', #
-          = link_to 'ログアウト', #
     - else
       = link_to 'ログイン', new_user_session_path, class: 'header_loginBtn'
     .line
