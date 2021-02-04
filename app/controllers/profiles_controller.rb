@@ -6,7 +6,7 @@ class ProfilesController < ApplicationController
     end
   
     def edit
-      @profile = current_user.build_profile
+      @profile = current_user.build_profile(profile_params)
     end
 
     # def create
@@ -30,7 +30,7 @@ class ProfilesController < ApplicationController
   
     private
     def profile_params
-      params.require(:profile).permit(
+      params.permit(
         :nickname,
         :introducsion,
         :gender,
