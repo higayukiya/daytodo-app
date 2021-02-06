@@ -9,15 +9,17 @@ class ProfilesController < ApplicationController
       @profile = current_user.build_profile(profile_params)
     end
 
-    # def create
-    #   @profile = current_user.profile.build(profile_params)
-    #     if @article.save
-    #       redirect_to profile_path(@profile), notice: '保存できたよ'
-    #     else
-    #       flash.now[:error] = '保存に失敗しました'
-    #       render :new
-    #     end
-    # end
+    
+    def create
+      @profile = current_user.build_profile(profile_params)
+        if @profile.save
+          redirect_to profile_path(@profile), notice: '保存できたよ'
+        else
+          flash.now[:error] = '保存に失敗しました'
+          render :new
+        end
+    end
+
     def update
       @profile = current_user.build_profile(profile_params)
       if @profile.save
