@@ -23,6 +23,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'better_errors'
 gem 'binding_of_caller'
+gem 'pry-rails'
 gem 'hamlit'
 gem 'devise'
 
