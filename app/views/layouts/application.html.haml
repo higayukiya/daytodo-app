@@ -10,13 +10,15 @@
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
   %body
     %header
-      .boards
-        Boards
+      .boards_title
+        = link_to 'Boards', root_path
     - if user_signed_in?
       .dropdown
         .dropdown-content
     - else
       = link_to 'ログイン', new_user_session_path, class: 'header_loginBtn'
+    .header_avatar
+      = image_tag current_user.avatar_image
     .line
     = yield
     %p.notice= notice

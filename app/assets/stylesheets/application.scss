@@ -15,7 +15,7 @@
 
 /* Boards */
 
-.boards{
+.boards_title{
     position: absolute;
     width: 56px;
     height: 25px;
@@ -29,6 +29,89 @@
     line-height: 25px;
 
     /* identical to box height */
+
+    color: #000000;
+
+}
+
+a {
+    text-decoration: none;
+  }
+a:hover {
+    text-decoration: none;
+  }
+a:visited{
+    color: inherit;
+  }
+
+
+.board_card{
+    width: 320px;
+    height: 161px;
+    margin: 35px auto 26px 0px; 
+    
+    background: #F4F4F4;
+    border-radius: 10px;
+}
+
+.board_title{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height: 25px;
+    width: 290px;
+    margin: 32px auto 6px 17px;
+
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000000;
+}
+
+.board_contens{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height: 15px;
+    width: 290px;
+    margin: 6px auto 29px 17px;
+
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    
+    color: #000000;
+  
+}
+
+.add_new_board{
+    width: 320px;
+    height: 160px;
+    margin: 26px 26px 26px 0px;
+
+    background: #FFFFFF;
+    border: 1px dashed rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+
+}
+
+.add_new_board_name{
+    height: 25px;
+    width: 143px;
+    margin: 67px 100px;
+
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    /* identical to box height */
+
+    text-align: center;
 
     color: #000000;
 }
@@ -51,11 +134,9 @@
 /* New Comment */
 
 .new_comment{
-    position: absolute;
-    height: 92px;
+    height: 27px;
     left: 26px;
-    right: 150px;
-    top: 92px;
+    margin: 30px auto 35px 0px;
 
     font-family: Avenge;
     font-style: normal;
@@ -145,7 +226,7 @@ border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   }
 
-  $image_size: 56px;
+  $image_size: 40px;
 
 .profilePage {
   margin-top: 24px;
@@ -198,4 +279,30 @@ border-radius: 10px;
       font-size: 12px;
     }
   }
+}
+
+
+.header_avatar{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  margin-left: 300px;
+
+  img {
+    width: $image_size;
+    height: $image_size;
+  }
+
+}
+
+.boards_avatar{
+  height: 40px;
+  width: 40px;
+  margin: 29px 290px 20px 20px;
+
+  img {
+    width: $image_size;
+    height: $image_size;
+  }
+
 }

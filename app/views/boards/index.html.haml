@@ -1,0 +1,14 @@
+.container
+  %h2.new_comment All Boards
+  - @boards.each do |board|
+    .board_card
+      .board_title
+        = board.title
+      .board_contens
+        = board.contens
+      .boards_avatar
+        = image_tag current_user.avatar_image
+  = link_to new_board_path do
+    .add_new_board
+      .add_new_board_name
+        +Add new board
