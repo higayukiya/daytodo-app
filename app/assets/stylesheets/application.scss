@@ -47,7 +47,7 @@ a:visited{
 
 .board_card{
     width: 320px;
-    height: 161px;
+    height: auto;
     margin: 35px auto 26px 0px; 
     
     background: #F4F4F4;
@@ -114,6 +114,16 @@ a:visited{
     text-align: center;
 
     color: #000000;
+}
+
+.board_dropdown{
+  height: 7px;
+  width: 24px;
+  margin: 40px 15px 12px 25px;
+}
+
+.board_flex_box{
+  display: flex;
 }
 
 /* Line */
@@ -299,10 +309,42 @@ border-radius: 10px;
   height: 40px;
   width: 40px;
   margin: 29px 290px 20px 20px;
+  padding: 10px;
 
   img {
     width: $image_size;
     height: $image_size;
   }
 
+}
+
+
+.child {
+  display: none;
+  position: relative; left: -50px;
+  padding: 15px;
+  margin-right: 5px;
+  height: 50px;
+  width: 50px;
+  background-color: white;
+
+  a{
+    font-size: 12px;
+    line-height: 2em;
+  }
+}
+
+.board_dropdown:hover .child {
+  display: inline-block;
+}
+
+.imgbox{
+  text-align: center;
+}
+
+.board_eyecatch{
+  width: 300px;
+  height: 150px;
+  margin: 10px;
+  border-radius: 10px;
 }

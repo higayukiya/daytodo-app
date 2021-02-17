@@ -2,8 +2,20 @@
   %h2.new_comment All Boards
   - @boards.each do |board|
     .board_card
-      .board_title
-        = board.title
+      .imgbox
+        -if board.eyecatch.attached?
+          = image_tag board.eyecatch, class: 'board_eyecatch'
+        - else
+          =image_tag 'default-eyecatch.jpg', class: 'board_eyecatch'
+      .board_flex_box
+        .board_title
+          = board.title
+        .board_dropdown
+          .hover_image
+            = image_tag 'Combined Shape.svg'
+            .child
+              = link_to 'Edit', board_path(board)
+              = link_to 'Delete', board_path(board),data: { method: 'delete', confirm: '削除しますか？' }
       .board_contens
         = board.contens
       .boards_avatar

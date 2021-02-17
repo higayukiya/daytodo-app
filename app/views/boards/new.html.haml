@@ -2,6 +2,10 @@
   %h2.new_comment New Board
   .label1
     = form_with(model:@board, url:boards_path, method:'post') do |f|
+      %div
+      = f.label :eyecatch, 'アイキャッチ'
+      %div
+      = f.file_field :eyecatch
       .field
         = f.label :title, "name", class: 'name'
         %br/
