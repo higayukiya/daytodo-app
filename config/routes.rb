@@ -5,5 +5,5 @@ Rails.application.routes.draw do
 
   resources :boards, only: [:show, :new, :create, :edit, :update, :destroy]
 
-  resource :profile, only: [:show, :edit, :create, :destroy]
+  resource :profile, only: [:show, :edit, :update, :create, :destroy]
 end

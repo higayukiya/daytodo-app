@@ -16,7 +16,7 @@
         - if user_signed_in?
           = image_tag current_user.avatar_image
         - else
-          = image_tag 'default-eyecatch.jpg'
+          = image_tag 'default-avatar.png'
         .avatar_child
           - if user_signed_in?
             = link_to 'Edit', edit_profile_path
