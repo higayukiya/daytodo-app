@@ -1,18 +1,27 @@
 .container
-  %ul
-    - @board.errors.full_messages.each do |message|
-      %li= message
-  = form_with(model: @board, local: true) do |f|
-    %div
-      = f.label :eyecatch, 'アイキャッチ'
-    %div
-      = f.file_field :eyecatch
-    %div
-      = f.label :title, 'タイトル'
-    %div
-      = f.text_field :title, class: 'text'
-    %div
-      = f.label :contens, '内容'
-    %div
-      = f.text_area :contens
-    = f.submit '保存', class: 'btn-primary'
+  %h2.new_comment 
+    = @board.title
+  .board_card
+    .imgbox
+      -if @board.eyecatch.attached?
+        = image_tag @board.eyecatch, class: 'board_eyecatch'
+      - else
+        =image_tag 'default-eyecatch.jpg', class: 'board_eyecatch'
+      .board_flex_box
+        .board_title
+          = @board.title
+        .board_dropdown
+          .hover_image
+            = image_tag 'Combined Shape.svg'
+            .child
+              = link_to 'Edit', edit_board_path
+              %br
+              = link_to 'Delete', @board_path, data: { method: 'delete', confirm: '削除しますか？' }
+      .board_contens
+        = @board.contens
+      .boards_avatar
+        = image_tag current_user.avatar_image
+  = link_to new_board_path do
+    .add_new_board
+      .add_new_board_name
+        +Add new card

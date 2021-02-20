@@ -158,7 +158,7 @@ a:visited{
 
 /* Name */
 .name{
-    margin-top: 33px;
+    margin-top: 25px;
     position: absolute;
     width: 250px;
     height: 25px;
@@ -190,7 +190,7 @@ position: absolute;
 width: 310px;
 height: 203px;
 left: 0px;
-top: 200px;
+top: 250px;
 
 background: #F4F4F4;
 border-radius: 10px;
@@ -203,7 +203,7 @@ border-radius: 10px;
     width: 310px;
     height: 40px;
     left: 0px;
-    top: 600px;
+    top: 500px;
     border: #FFFFFF;
 
     background: #F8BD1C;
@@ -294,9 +294,9 @@ border-radius: 10px;
 
 .header_avatar{
   display: inline-block;
-  height: 40px;
-  width: 40px;
-  margin-left: 300px;
+  height: 60px;
+  width: 60px;
+  position: absolute; top: 10px; left: 310px;
 
   img {
     width: $image_size;
@@ -334,8 +334,23 @@ border-radius: 10px;
   }
 }
 
+.avatar_child{
+  display: none;
+  position: relative; left: -50px;
+  width: 50px;
+  height: 50px;
+  padding: 15px;
+  margin: 10px;
+  background-color: #f1eeee;
+  font-size: 12px;
+}
+
 .board_dropdown:hover .child {
   display: inline-block;
+}
+
+.header_avatar:hover .avatar_child {
+  display: block;
 }
 
 .imgbox{

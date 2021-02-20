@@ -1,1 +1,17 @@
-edit
+.container
+  %h2.new_comment Edit Board
+  .label1
+    = form_with(model: @board, local: true) do |f|
+      %div
+      = f.label :eyecatch, 'アイキャッチ'
+      %div
+      = f.file_field :eyecatch
+      .field
+        = f.label :title, "name", class: 'name'
+        %br/
+        = f.text_field :title, class: 'rectangle'
+      .field
+        = f.label :contens, 'dispricsion', class: 'name'
+        %br/
+        = f.text_field :contens, class: 'content_input'
+        = f.submit "Submit", class: 'submit_btn'

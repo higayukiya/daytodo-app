@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root to: 'boards#index'
 
-  resources :boards, only: [:show, :new, :create, :update, :destroy]
+  resources :boards, only: [:show, :new, :create, :edit, :update, :destroy]
 
-  resource :profile, only: [:show, :edit, :create]
+  resource :profile, only: [:show, :edit, :create, :destroy]
 end
