@@ -2,25 +2,26 @@
   %h2.new_comment All Boards
   - @boards.each do |board|
     .board_card
-      .imgbox
-        -if board.eyecatch.attached?
-          = image_tag board.eyecatch, class: 'board_eyecatch'
-        - else
-          =image_tag 'default-eyecatch.jpg', class: 'board_eyecatch'
-      .board_flex_box
-        .board_title
-          = board.title
-        .board_dropdown
-          .hover_image
-            = image_tag 'Combined Shape.svg'
-            .child
-              = link_to 'Edit', edit_board_path(board)
-              %br
-              = link_to 'Delete', board_path(board),data: { method: 'delete', confirm: '削除しますか？' }
-      .board_contens
-        = board.contens
-      .boards_avatar
-        = image_tag board.user.avatar_image
+      = link_to board_path(board) do
+        .imgbox
+          -if board.eyecatch.attached?
+            = image_tag board.eyecatch, class: 'board_eyecatch'
+          - else
+            =image_tag 'default-eyecatch.jpg', class: 'board_eyecatch'
+        .board_flex_box
+          .board_title
+            = board.title
+          .board_dropdown
+            .hover_image
+              = image_tag 'Combined Shape.svg'
+              .child
+                = link_to 'Edit', edit_board_path(board)
+                %br
+                = link_to 'Delete', board_path(board),data: { method: 'delete', confirm: '削除しますか？' }
+        .board_contens
+          = board.contens
+        .boards_avatar
+          = image_tag board.user.avatar_image
   = link_to new_board_path do
     .add_new_board
       .add_new_board_name

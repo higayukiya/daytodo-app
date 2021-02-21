@@ -1,7 +1,7 @@
 .container
-  %h2.new_comment New Board
+  %h2.new_comment New Card
   .label1
-    = form_with(model:@board, url:boards_path, method:'post') do |f|
+    = form_with(model:@task, url:task_path, method:'post') do |f|
       %div
       = f.label :eyecatch, 'アイキャッチ'
       %div
@@ -14,4 +14,8 @@
         = f.label :contens, "Dispricsion", class: 'name'
         %br/
         = f.text_field :contens, class: 'content_input'
+        %div
+        = f.label :birthday, '生年月日'
+        %div
+        = f.date_field :birthday, class: 'text'
         = f.submit "Submit", class: 'submit_btn'
