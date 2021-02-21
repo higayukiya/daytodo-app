@@ -59,7 +59,7 @@ a:visited{
     white-space: nowrap;
     text-overflow: ellipsis;
     height: 25px;
-    width: 290px;
+    width: 250px;
     margin: 32px auto 6px 17px;
 
     font-family: Avenir;
@@ -362,4 +362,8 @@ border-radius: 10px;
   height: 150px;
   margin: 10px;
   border-radius: 10px;
+}
+
+.hover_image{
+  position: relative; right: 15px;
 }

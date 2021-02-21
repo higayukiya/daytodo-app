@@ -1,8 +1,8 @@
 .container
   %h2.new_comment All Boards
   - @boards.each do |board|
-    .board_card
-      = link_to board_path(board) do
+    = link_to board_path(board) do
+      .board_card
         .imgbox
           -if board.eyecatch.attached?
             = image_tag board.eyecatch, class: 'board_eyecatch'
