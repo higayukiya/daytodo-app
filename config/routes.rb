@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   resources :boards, only: [:show, :new, :create, :edit, :update, :destroy]
 
   resource :profile, only: [:show, :edit, :update, :create, :destroy]
+
+  resources :task, only:   [:show, :new, :create, :edit, :update, :destroy]
 end
