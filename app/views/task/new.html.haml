@@ -1,7 +1,7 @@
 .container
   %h2.new_comment New Card
   .label1
-    = form_with(model:@task, url:task_path, method:'post') do |f|
+    = form_with(model:@task, url:task_index_path, method:'post') do |f|
       %div
       = f.label :eyecatch, 'アイキャッチ'
       %div
@@ -11,11 +11,11 @@
         %br/
         = f.text_field :title, class: 'rectangle'
       .field
-        = f.label :contens, "Dispricsion", class: 'name'
+        = f.label :description, "Description", class: 'name'
         %br/
-        = f.text_field :contens, class: 'content_input'
-        %div
-        = f.label :birthday, '生年月日'
-        %div
-        = f.date_field :birthday, class: 'text'
+        = f.text_field :description, class: 'content_input'
+      .field
+        = f.label :endday, '期限日', class: 'name'
+        %br/
+        = f.date_field :endday
         = f.submit "Submit", class: 'submit_btn'

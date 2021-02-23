@@ -146,7 +146,7 @@ a:visited{
 .new_comment{
     height: 27px;
     left: 26px;
-    margin: 30px auto 35px 0px;
+    margin: 30px auto 25px 0px;
 
     font-family: Avenge;
     font-style: normal;
@@ -159,7 +159,6 @@ a:visited{
 /* Name */
 .name{
     margin-top: 25px;
-    position: absolute;
     width: 250px;
     height: 25px;
 
@@ -177,7 +176,7 @@ a:visited{
 /* Rectangle */
 
 .rectangle{
-    margin-top: 55px;
+    margin-top: 25px;
     width: 310px;
     height: 40px;
 
@@ -186,14 +185,14 @@ a:visited{
 }
 
 .content_input{
-position: absolute;
-width: 310px;
-height: 203px;
-left: 0px;
-top: 250px;
-
-background: #F4F4F4;
-border-radius: 10px;
+    margin-top: 20px;
+    width: 310px;
+    height: 203px;
+    left: 0px;
+    top: 250px;
+    
+    background: #F4F4F4;
+    border-radius: 10px;
 }
 
 /* Tag */

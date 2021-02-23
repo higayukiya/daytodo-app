@@ -1,0 +1,28 @@
+.container
+  %h2.new_comment 
+    = @task.title
+  .board_card
+    .imgbox
+      -if @task.eyecatch.attached?
+        = image_tag @task.eyecatch, class: 'board_eyecatch'
+      - else
+        =image_tag 'default-eyecatch.jpg', class: 'board_eyecatch'
+      .board_flex_box
+        .board_title
+          = @task.title
+        .board_dropdown
+          .hover_image
+            = image_tag 'Combined Shape.svg'
+            .child
+              = link_to 'Edit', edit_task_path
+              %br
+              = link_to 'Delete', @task_path, data: { method: 'delete', confirm: '削除しますか？' }
+      .board_contens
+        = @task.description
+        = @task.endday
+      .boards_avatar
+        = image_tag current_user.avatar_image
+  = link_to new_task_path do
+    .add_new_board
+      .add_new_board_name
+        +Add new card
