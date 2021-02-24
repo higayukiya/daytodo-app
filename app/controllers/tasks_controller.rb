@@ -1,8 +1,8 @@
-class TaskController < ApplicationController
+class TasksController < ApplicationController
     before_action :authenticate_user!
 
     def new
-        board = Board.find(params[:id])
+        board = Board.find(params[:board_id])
         @task = board.tasks.build
     end
     
@@ -26,10 +26,10 @@ class TaskController < ApplicationController
     
 
     def create
-        board = Board.find(params[:id])
+        board = current_user.Board.find(params[:board_id])
         @task = board.tasks.build(task_params)
         if @task.save!
-          redirect_to task_path(@task), notice: '保存できたよ'
+          redirect_to board_task_path(board), notice: '保存できたよ'
         else
           flash.now[:error] = '保存に失敗しました'
           render :new
