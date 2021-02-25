@@ -16,7 +16,7 @@
             .child
               = link_to 'Edit', edit_task_path
               %br
-              = link_to 'Delete', @task_path, data: { method: 'delete', confirm: '削除しますか？' }
+              = link_to 'Delete', board_task_path, data: { method: 'delete', confirm: '削除しますか？' }
       .board_contens
         = @task.description
         = @task.endday
