@@ -22,7 +22,7 @@
         = @task.endday
       .boards_avatar
         = image_tag current_user.avatar_image
-  = link_to new_task_path do
+  = link_to new_board_task_path(@board) do
     .add_new_board
       .add_new_board_name
         +Add new card
