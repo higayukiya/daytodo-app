@@ -10,19 +10,12 @@
       .board_flex_box
         .board_title
           = @task.title
-        .board_dropdown
-          .hover_image
-            = image_tag 'Combined Shape.svg'
-            .child
-              = link_to 'Edit', edit_task_path
-              %br
-              = link_to 'Delete', board_task_path, data: { method: 'delete', confirm: '削除しますか？' }
       .board_contens
         = @task.description
         = @task.endday
       .boards_avatar
         = image_tag current_user.avatar_image
-  = link_to new_board_task_path(@board) do
-    .add_new_board
-      .add_new_board_name
-        +Add new card
+  = link_to board_task_comment_path(@board, @task) do
+    .add_new_comment
+      .add_new_comment_name
+        +Add new comment

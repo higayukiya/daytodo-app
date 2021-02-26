@@ -1,5 +1,5 @@
 .container
-  %h2.new_comment 
+  %h2.new_comment
     = @board.title
   .board_card
     .imgbox
@@ -7,20 +7,17 @@
         = image_tag @board.eyecatch, class: 'board_eyecatch'
       - else
         =image_tag 'default-eyecatch.jpg', class: 'board_eyecatch'
-      .board_flex_box
-        .board_title
-          = @board.title
-        .board_dropdown
-          .hover_image
-            = image_tag 'Combined Shape.svg'
-            .child
-              = link_to 'Edit', edit_board_path
-              %br
-              = link_to 'Delete', @board_path, data: { method: 'delete', confirm: '削除しますか？' }
-      .board_contens
-        = @board.contens
-      .boards_avatar
-        = image_tag current_user.avatar_image
+      .board_dropdown
+        .hover_image_2
+          = image_tag 'Combined Shape.svg'
+          .child
+            = link_to 'Edit', edit_board_path(@board)
+            %br
+            = link_to 'Delete', board_path(@board),data: { method: 'delete', confirm: '削除しますか？' }
+    .board_contens
+      = @board.contens
+    .boards_avatar
+      = image_tag current_user.avatar_image
   - @task.each do |task|
     = link_to board_task_path(@board.id, task) do
       .board_card
@@ -32,13 +29,6 @@
           .board_flex_box
             .board_title
               = task.title
-            .board_dropdown
-              .hover_image
-                = image_tag 'Combined Shape.svg'
-                .child
-                  = link_to 'Edit', edit_board_path(@board)
-                  %br
-                  = link_to 'Delete', board_path(@board),data: { method: 'delete', confirm: '削除しますか？' }
           .board_contens
             = task.description
           .boards_avatar

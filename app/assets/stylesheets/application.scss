@@ -88,6 +88,25 @@ a:visited{
   
 }
 
+.board_contens_2{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  height: 15px;
+  width: 290px;
+  margin: 6px auto 29px 17px;
+
+  font-family: Avenir;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  
+  color: #000000;
+
+}
+
+
 .add_new_board{
     width: 320px;
     height: 160px;
@@ -98,11 +117,40 @@ a:visited{
     border-radius: 10px;
 
 }
+.add_new_comment{
+  width: 320px;
+  height: 80px;
+  margin: 26px 26px 26px 0px;
+
+  background: #FFFFFF;
+  border: 1px dashed rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+
+}
+
+.add_new_comment_name{
+  height: 25px;
+  width: 200px;
+  margin: 30px 75px;
+
+  font-family: Avenir;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #000000;
+}
+
+
 
 .add_new_board_name{
     height: 25px;
-    width: 143px;
-    margin: 67px 100px;
+    width: 200px;
+    margin: 67px 75px;
 
     font-family: Avenir;
     font-style: normal;
@@ -365,4 +413,8 @@ a:visited{
 
 .hover_image{
   position: relative; right: 15px;
+}
+
+.hover_image_2{
+  position: relative; left: 250px;
 }
