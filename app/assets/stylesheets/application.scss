@@ -54,6 +54,24 @@ a:visited{
     border-radius: 10px;
 }
 
+.card_comment{
+  width: 320px;
+  height: fit-content;
+  margin: 35px auto 26px 0px; 
+  text-align: center;
+  
+  background: #F4F4F4;
+  border-radius: 10px;
+
+  display: flex;
+
+}
+
+.comment_text{
+  width: fit-content;
+  height: fit-content;
+}
+
 .board_title{
     overflow: hidden;
     white-space: nowrap;
