@@ -64,12 +64,20 @@ a:visited{
   border-radius: 10px;
 
   display: flex;
+  flex-wrap:nowrap
 
 }
 
 .comment_text{
-  width: fit-content;
+  width: 200px;
   height: fit-content;
+  margin: 10px;
+
+  position: relative;
+  left: 50px;
+  bottom: 60px;
+
+  word-break: break-all;
 }
 
 .board_title{

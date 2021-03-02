@@ -14,12 +14,12 @@
         = @task.description
         = @task.endday
       .boards_avatar
-        = image_tag @board.user.avatar_image
+        = image_tag @task.user.avatar_image
   %h2.new_comment コメント一覧
   - @comment.each do |comment|
     .card_comment
       .boards_avatar
-        = image_tag @board.user.avatar_image
+        = image_tag comment.user.avatar_image
         .comment_text
           = comment.content
   = link_to new_board_task_comment_path(@board, @task) do

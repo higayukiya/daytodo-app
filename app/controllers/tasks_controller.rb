@@ -28,8 +28,7 @@ class TasksController < ApplicationController
     
 
     def create
-        @user = current_user
-        board = @user.boards.find(params[:board_id])
+        board = Board.find(params[:board_id])
         @task = board.tasks.build(task_params)
         if @task.save!
           redirect_to board_task_path(board, @task), notice: '保存できたよ'
@@ -50,6 +49,6 @@ class TasksController < ApplicationController
     
     private
       def task_params
-        params.require(:task).permit(:title, :description, :endday, :eyecatch)
+        params.require(:task).permit(:title, :description, :endday, :eyecatch).merge(user_id: current_user.id)
       end
 end
